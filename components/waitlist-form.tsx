@@ -93,6 +93,17 @@ export function WaitlistForm({
           {errorCopy[error]}
         </p>
       )}
+      <p className="px-5 text-[12px] leading-relaxed text-muted-foreground">
+        By signing up you agree to our{' '}
+        <a href="/terms" className="underline underline-offset-2 transition-colors duration-150 hover:text-foreground">
+          Terms
+        </a>{' '}
+        and{' '}
+        <a href="/privacy" className="underline underline-offset-2 transition-colors duration-150 hover:text-foreground">
+          Privacy Policy
+        </a>
+        .
+      </p>
     </form>
   )
 }

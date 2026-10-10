@@ -8,6 +8,16 @@ export function SiteFooter() {
         </div>
         <ul className="flex items-center gap-5 text-sm">
           <li>
+            <a href="/privacy" className="text-muted-foreground transition-colors duration-150 hover:text-foreground">
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a href="/terms" className="text-muted-foreground transition-colors duration-150 hover:text-foreground">
+              Terms
+            </a>
+          </li>
+          <li>
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors duration-150 hover:text-foreground">
               X
             </a>

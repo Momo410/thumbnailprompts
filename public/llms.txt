@@ -20,4 +20,7 @@ Works with Claude, ChatGPT and Cursor.
 
 ## Optional
 
+- [Privacy Policy](https://thumbnailprompts.com/privacy): what data the site collects and how to delete it
+- [Terms of Service](https://thumbnailprompts.com/terms): terms for using the site and the waitlist
+
 - [Source code](https://github.com/Momo410/thumbnailprompts): the website's public repository
