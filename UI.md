@@ -5,7 +5,7 @@ Vercel's design discipline (black and white, hairlines, grid, precision) mixed w
 ## 1. Principles
 
 - **The thumbnails are the color.** The UI is black, white and grey so the gallery images carry all the color.
-- **One accent, used once.** Blue appears on one element per screen: the focused card, the cursor, the primary link.
+- **One accent, used once.** Red appears on one element per screen: the focused card, the cursor, the primary link.
 - **Hairlines, not boxes.** Structure comes from 1px borders and the background grid, not from fills or heavy shadows.
 - **Real over decorative.** Show real thumbnails and real prompts. No stock illustrations, no gradient blobs, no glow.
 - **Quiet motion.** Short, precise, ease-out. Nothing bounces.
@@ -22,8 +22,8 @@ Vercel's design discipline (black and white, hairlines, grid, precision) mixed w
 | `--border` | `rgba(0,0,0,0.08)` | `rgba(255,255,255,0.10)` | Card and divider hairlines |
 | `--border-strong` | `rgba(0,0,0,0.16)` | `rgba(255,255,255,0.18)` | Hover borders, inputs |
 | `--grid` | `rgba(0,0,0,0.04)` | `rgba(255,255,255,0.05)` | Background grid lines |
-| `--accent` | `#0080FF` | `#3399FF` | The one accent |
-| `--accent-soft` | `rgba(0,128,255,0.10)` | `rgba(51,153,255,0.16)` | Focus rings, selected states |
+| `--accent` | `#FF2E2E` | `#FF4D4D` | The one accent |
+| `--accent-soft` | `rgba(255,46,46,0.10)` | `rgba(255,77,77,0.16)` | Focus rings, selected states |
 
 No other hues in the UI chrome. Success/error states use text and icons first; if a color is unavoidable use `#16A34A` / `#DC2626` at small size.
 
@@ -78,7 +78,7 @@ Shadows: only one, for lifted cards: `0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgb
 
 - Easing: `cubic-bezier(0.22, 1, 0.36, 1)` (ease-out-quint). Durations 150ms (hover), 300ms (UI), 600–900ms (video moves).
 - Reveals: fade + 8px rise. Text types in mono at ~40 chars/s. Cards lift, never spin or bounce.
-- Video: white canvas, faint grid, one blue cursor; cuts on the beat; no glow, no particles, no lens flares.
+- Video: white canvas, faint grid, one red cursor; cuts on the beat; no glow, no particles, no lens flares.
 
 ## 9. Don'ts
 

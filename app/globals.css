@@ -54,8 +54,8 @@
   --border: rgba(255, 255, 255, 0.1);
   --border-strong: rgba(255, 255, 255, 0.18);
   --grid: rgba(255, 255, 255, 0.05);
-  --brand: #0080ff;
-  --brand-soft: rgba(0, 128, 255, 0.16);
+  --brand: #ff4d4d;
+  --brand-soft: rgba(255, 77, 77, 0.16);
   --danger: #dc2626;
   --radius: 0.5rem;
 }
