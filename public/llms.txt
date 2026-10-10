@@ -1,0 +1,23 @@
+# thumbnailprompts
+
+> thumbnailprompts is a Claude connector (MCP server) for YouTube creators. You describe your video or paste the transcript, and Claude writes a ready-to-render thumbnail prompt — layout, typography, colors and your own face — based on a curated library of thumbnail designs that have already performed well. You paste the prompt into an image model (ChatGPT, Gemini) with your face photo to get the finished thumbnail.
+
+Status: the website and early-access waitlist are live. The MCP connector is in development; people can join the waitlist on the homepage to get access first.
+
+## How it works
+
+1. Connect the MCP: add thumbnailprompts to Claude in one click.
+2. Ask for a thumbnail: describe your video, and it picks a trending layout that fits the topic.
+3. Paste and generate: run the prompt in ChatGPT or Gemini with your face photo.
+
+Works with Claude, ChatGPT and Cursor.
+
+## Pages
+
+- [Home](https://thumbnailprompts.com/): product overview, example prompt and waitlist sign-up
+- [How it works](https://thumbnailprompts.com/#how-it-works): the three steps
+- [Gallery](https://thumbnailprompts.com/#gallery): example thumbnails made with thumbnailprompts prompts
+
+## Optional
+
+- [Source code](https://github.com/Momo410/thumbnailprompts): the website's public repository

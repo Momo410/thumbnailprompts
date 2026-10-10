@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Instrument_Sans, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from '@/lib/site'
 import './globals.css'
 
 const instrumentSans = Instrument_Sans({
@@ -24,19 +25,60 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
-const title = 'thumbnailprompts — viral thumbnail prompts inside Claude'
-const description =
-  'A Claude connector (MCP) that writes handcrafted, trend-aware YouTube thumbnail prompts with your own face in them. Sign up for early access.'
+const title = SITE_TITLE
+const description = SITE_DESCRIPTION
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: `${SITE_URL}/brand/app-icon-512.png`,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      description,
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: SITE_NAME,
+      url: SITE_URL,
+      description,
+      applicationCategory: 'DesignApplication',
+      operatingSystem: 'Web',
+      image: `${SITE_URL}/brand/og-image-1200.png`,
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+  ],
+}
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://thumbnailprompts.com'),
+  metadataBase: new URL(SITE_URL),
   title,
   description,
+  applicationName: SITE_NAME,
+  keywords: [
+    'YouTube thumbnail prompts',
+    'thumbnail prompt generator',
+    'AI thumbnail',
+    'Claude connector',
+    'MCP server',
+    'ChatGPT image prompts',
+    'Gemini image prompts',
+  ],
+  alternates: { canonical: '/' },
   openGraph: {
     title,
     description,
-    url: 'https://thumbnailprompts.com',
-    siteName: 'thumbnailprompts',
+    url: SITE_URL,
+    siteName: SITE_NAME,
     type: 'website',
     images: [{ url: '/brand/og-image-1200.png', width: 1200, height: 630, alt: 'thumbnailprompts' }],
   },
@@ -68,6 +110,10 @@ export default function RootLayout({
       className={`bg-background ${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+        />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
